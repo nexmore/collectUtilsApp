@@ -1,0 +1,46 @@
+server:
+  port: 9096
+
+mariadb:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url:
+    username:
+    password:
+    validation-query: SELECT 1
+
+ssh:
+  timeout:
+    execute: 600
+    login: 60
+    waiting: 10
+
+realtime:
+  script_name: node_traceroute_ping_script.sh
+
+telnet:
+  thread:
+    timeout: 3600
+    core-pool : 50
+    max-pool : 150
+  queue:
+    capacity : 3000
+
+general:
+  thread:
+    timeout: 1800
+    core-pool : 20
+    max-pool : 100
+  queue:
+    capacity : 3000
+
+script:
+  collect:
+    scriptPath: /app/SIMS/scripts
+    resultPath: /app/SIMS/data1
+    manualResultPath: /app/SIMS/manual
+    javaLibScanConfigPath: /home/datainfo/javaLibScanConfigPath
+
+batch:
+  cmd:
+    url: http://localhost:9098/datainfo/batch/v1.0/cmd
