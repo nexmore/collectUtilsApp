@@ -1,13 +1,13 @@
-package com.datainfo.remoteshell;
+package com.datainfo.remoteshell.presenter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CollectUtilsAppApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(CollectUtilsAppApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
